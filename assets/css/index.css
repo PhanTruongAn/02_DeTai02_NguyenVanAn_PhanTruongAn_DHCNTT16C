@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color-light: #1dd5f5;
+    --main-color-dark: #1dd5f5;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    object-fit: cover;
+}
+
+
+/* header */
+
+header {
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    /* top: -100px; */
+    transition: top 0.5s ease-in-out;
+    left: 0;
+    right: 0;
+}
+
+.stateBox .nav-link,
+.navbar-expand-md .navbar-nav .nav-link {
+    color: #000;
+    font-size: 18px;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: all 0.3s ease-out;
+}
+
+.sub-menu li:hover .nav-link,
+.navbar-expand-md .nav-item:hover>.nav-link {
+    color: var(--main-color-light) !important;
+}
+
+.navbar-expand-md .nav-item:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub-menu li:hover .nav-link {
+    margin-left: 10px;
+}
+
+.stateBox .nav-link {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.sub-menu {
+    position: absolute;
+    visibility: collapse;
+    opacity: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 12px 10px;
+    min-width: 250px;
+    transition: visibility 0s, opacity 0.3s linear;
+    z-index: 100;
+}
+
+.sub-menu a {
+    transition: all 0.1s ease-in-out;
+}
+
+.sub-menu li {
+    /* border: 1px solid #000; */
+}
+
+
+/* end header */
+
+
+/* slider */
+
+#slider {
+    /* margin-top: 80px; */
+}
+
+.slider-bg {
+    padding-top: 930px;
+}
+
+.lopphu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#slider .carousel-caption {
+    top: 50%;
+    transform: translateY(-10%);
+}
+
+
+/* end slider */
+
+.btn-buy {
+    background: var(--main-color-dark);
+    color: #fff;
+    width: 100%;
+}
+
+.btn-buy:hover {
+    background-color: rgba(0, 17, 255, 0.792);
+    color: #fff;
+}
+
+
+/* product */
+
+#product {
+    margin-top: 50px;
+}
+
+#product .owl-prev {
+    padding: 20px;
+}
+
+.text-title {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.product_brand {
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.product_figure {
+    display: flex;
+    /* height: 140px; */
+    max-width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-custom {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.item-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-price,
+.card-text {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    margin-bottom: auto;
+}
+
+
+/* end product */
+
+.selection-banner {
+    margin-top: 150px;
+    position: relative;
+    background: url("../img/slider/Slide1.jpg");
+    padding-top: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.selection-banner-item-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    color: rgb(255, 255, 255);
+}
+
+.feedback {
+    position: relative;
+    margin-top: 220px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #1dd5f5;
+}
+
+.customer-reviews .card-body {
+    height: 200px;
+    padding-left: 120px;
+}
+
+.item {
+    height: 100%;
+}
+
+.customer-reviews .avt {
+    position: absolute;
+    width: 80px !important;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+}
+
+.customer-reviews .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-reviews .item-price {
+    margin-top: auto;
+}
+
+#myVideo {
+    display: block;
+    height: 720px;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* footer */
+
+.footer-area {
+    background: var(--main-color-light);
+    color: rgb(12, 12, 12);
+    padding-top: 80px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 2px solid rgb(12, 12, 12);
+}
+
+.footer-area a {
+    display: block;
+    color: rgb(12, 12, 12);
+    margin-bottom: 0.5em;
+}
+
+.footer-area input {
+    border-color: rgb(12, 12, 12);
+    padding: 25px;
+    color: rgb(12, 12, 12);
+}
+
+.footer-area input:focus,
+.footer-area input::placeholder {
+    color: rgb(12, 12, 12);
+}
+
+
+/* end footer */

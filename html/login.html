@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login And SignUp</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/fonts/material-icon/css/material-design-iconic-font.css">
+    <script src="../assets/js/login.js"></script>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container right-panel-active ">
+        <!-- Đăng kí -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Sign Up</h2>
+                <div class="form-group">
+                    <input type="text" placeholder="Login Name" class="input" name="name" id="name-signup" />
+                    <div class="check text-success d-none">
+                        <i class=" zmdi zmdi-check-circle"></i>
+                    </div>
+                    <div class="check text-danger d-none">
+                        <i class=" zmdi zmdi-close-circle"></i>
+                        <span class="notification bg-danger ">Trên 3 kí tự và không có kí tự cách hay đặc biệt</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="input " name="email" id="email-signup" />
+                    <div class="check text-success d-none">
+                        <i class=" zmdi zmdi-check-circle"></i>
+                    </div>
+                    <div class="check text-danger d-none">
+                        <i class=" zmdi zmdi-close-circle"></i>
+                        <span class="notification bg-danger">Định dạng chưa hợp lệ</span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="input" name="password" id="password-signup" />
+                    <div class="check text-success d-none">
+                        <i class=" zmdi zmdi-check-circle"></i>
+                        <span class="notification bg-success ">Strong</span>
+                    </div>
+                    <div class="check text-warning d-none">
+                        <i class="zmdi zmdi-alert-triangle"></i>
+                        <p class="notification bg-warning">Medium</p>
+                    </div>
+                    <div class="check text-danger d-none">
+                        <i class=" zmdi zmdi-close-circle"></i>
+                        <span class="notification bg-danger">Weak</span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Comfilm password" class="input" name="confirm-password" id="confirm-password-signup" />
+                    <div class="check text-success d-none">
+                        <i class=" zmdi zmdi-check-circle"></i>
+                    </div>
+                    <div class="check text-danger d-none">
+                        <i class=" zmdi zmdi-close-circle"></i>
+                    </div>
+                </div>
+                <button class="btn">Sign Up</button>
+                <div class="overlay__panel">
+                    <a class="link" id="signIn">Have Account? Login</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Đăng nhập -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <h2 class="form__title">Login</h2>
+                <input type="text" placeholder="Login Name" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <a href="#" class="link">Forgot your password?</a>
+                <button class="btn">Login</button>
+                <div class="overlay__panel">
+                    <a class="link" id="signUp">Don't have Account? Sign Up!</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

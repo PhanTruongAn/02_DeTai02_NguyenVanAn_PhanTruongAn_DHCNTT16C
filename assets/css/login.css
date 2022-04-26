@@ -1,0 +1,232 @@
+:root {
+    --white: #fff;
+    --gray: #333;
+    --origin: #07fbef;
+    --button-radius: 0.7rem;
+    --max-width: 1290px;
+    --max-height: 720px;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    align-items: center;
+    background-color: aqua;
+    display: grid;
+    height: 98vh;
+    place-items: center;
+}
+
+.form__title {
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 1.25rem;
+}
+
+.link {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--origin);
+    cursor: pointer;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: var(--button-radius);
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25), 0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+    height: var(--max-height);
+    max-width: var(--max-width);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.container__form {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.container--signin {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.right-panel-active .container--signin {
+    transform: translateX(100%);
+}
+
+.container--signup {
+    left: 0;
+    opacity: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.container.right-panel-active .container--signup {
+    animation: show 0.6s;
+    opacity: 1;
+    transform: translateX(100%);
+    z-index: 999;
+}
+
+.container__overlay {
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+    z-index: 100;
+}
+
+.container.right-panel-active .container__overlay {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: url("../img/dangki+dangnhap/login.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: -100%;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 200%;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay__panel {
+    margin-top: 50px;
+}
+
+.overlay__panel p {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn {
+    background-color: var(--origin);
+    border-radius: 8px;
+    border: 1px solid var(--origin);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 0.7rem 3rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.btn:hover {
+    background-color: blue;
+    background-image: var(--white);
+    color: var(--origin);
+}
+
+.form>.btn {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+}
+
+.check {
+    position: absolute;
+    font-size: 21px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 999;
+    background-color: #fff;
+    padding: 4px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    height: 100%;
+    text-align: center;
+}
+
+.input {
+    background-color: #fff;
+    border: none;
+    position: relative;
+    border-bottom: 1px solid #000;
+    padding: 0.9rem 0.9rem;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.notification {
+    position: absolute;
+    top: 47px;
+    font-size: 14px;
+    min-width: max-content;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 0 0 0 8px;
+    right: -10px;
+    /* transform: translateX(-50%); */
+    padding: 4px 8px;
+}
+
+.bg-danger {
+    background-color: #f2dede !important;
+}
+
+.bg-success {
+    background-color: #dff0d8 !important;
+}
+
+.bg-warning {
+    background-color: #fcf8e3 !important;
+}
+
+@keyframes show {
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
